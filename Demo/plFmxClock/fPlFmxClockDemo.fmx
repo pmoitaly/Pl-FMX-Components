@@ -1,0 +1,426 @@
+object frmPlFmxClockDemo: TfrmPlFmxClockDemo
+  Left = 0
+  Top = 0
+  Caption = 'TabbedForm'
+  ClientHeight = 797
+  ClientWidth = 700
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object HeaderToolBar: TToolBar
+    Anchors = []
+    Size.Width = 700.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Align = Contents
+      Size.Width = 700.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'PlFmxClock simple Demo'
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 700.000000000000000000
+    Size.Height = 749.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      700s
+      700s
+      700s
+      700s
+      498s
+      568s
+      510s
+      508s)
+    object tbiAnalogClock: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 349.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemtoprated'
+      TabOrder = 0
+      Text = 'AnalogClock'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object pnlClock: TPanel
+        Align = Bottom
+        Position.Y = 532.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 168.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblDotColor: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Dots color'
+        end
+        object chkDotsShow: TCheckBox
+          IsChecked = True
+          Position.X = 168.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          Text = 'Show Dots'
+          OnChange = chkDotsShowChange
+        end
+        object ccbDots: TComboColorBox
+          Color = claWhite
+          Position.X = 91.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+          OnChange = ccbDotsChange
+        end
+        object lblPastColor: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 78.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Past color'
+        end
+        object ccbPastColor: TComboColorBox
+          Color = claWhite
+          Position.X = 91.000000000000000000
+          Position.Y = 78.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          OnChange = ccbPastColorChange
+        end
+        object ccbPresentColor: TComboColorBox
+          Color = claWhite
+          Position.X = 91.000000000000000000
+          Position.Y = 138.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          OnChange = ccbPresentColorChange
+        end
+        object lblPresentColor: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 138.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Present color'
+        end
+        object lblFutureColor: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Future color'
+        end
+        object ccbFutureColor: TComboColorBox
+          Color = claWhite
+          Position.X = 91.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          OnChange = ccbFutureColorChange
+        end
+        object chkHideUnusedDots: TCheckBox
+          IsChecked = True
+          Position.X = 280.000000000000000000
+          Position.Y = 16.000000000000000000
+          TabOrder = 12
+          Text = 'Hide Unused Dots'
+          OnChange = chkHideUnusedDotsChange
+        end
+        object lblPeriod: TLabel
+          Position.X = 176.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Period'
+        end
+        object lblCurrentMinute: TLabel
+          Position.X = 176.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Current minute'
+        end
+        object spbPeriod: TSpinBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 18
+          Cursor = crIBeam
+          Min = -1.000000000000000000
+          Max = 60.000000000000000000
+          Position.X = 272.000000000000000000
+          Position.Y = 45.000000000000000000
+          OnChange = spbPeriodChange
+        end
+        object spbCurrentMinute: TSpinBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 17
+          Cursor = crIBeam
+          Min = -1.000000000000000000
+          Max = 59.000000000000000000
+          Value = -1.000000000000000000
+          Position.X = 272.000000000000000000
+          Position.Y = 71.000000000000000000
+          OnChange = spbCurrentMinuteChange
+        end
+        object lblExtraTime: TLabel
+          Position.X = 176.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Extra time'
+        end
+        object spbExtraTime: TSpinBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 15
+          Cursor = crIBeam
+          Max = 59.000000000000000000
+          Position.X = 272.000000000000000000
+          Position.Y = 96.000000000000000000
+          OnChange = spbExtraTimeChange
+        end
+        object lblExtraTimeColor: TLabel
+          AutoSize = True
+          Position.X = 176.000000000000000000
+          Position.Y = 138.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'ExtraTime color'
+        end
+        object ccbExtraTimeColor: TComboColorBox
+          Color = claWhite
+          Position.X = 275.000000000000000000
+          Position.Y = 138.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          OnChange = ccbExtraTimeColorChange
+        end
+        object chkShowHours: TCheckBox
+          IsChecked = True
+          Position.X = 400.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 96.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 21
+          Text = 'Show Hours'
+          OnChange = chkShowHoursChange
+        end
+        object chkActive: TCheckBox
+          IsChecked = True
+          Position.X = 16.000000000000000000
+          Position.Y = 16.000000000000000000
+          TabOrder = 23
+          Text = 'Active'
+          OnChange = chkActiveChange
+        end
+        object chkShowMinutes: TCheckBox
+          IsChecked = True
+          Position.X = 400.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 113.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 20
+          Text = 'Show Minutes'
+          OnChange = chkShowMinutesChange
+        end
+        object chkShowSeconds: TCheckBox
+          IsChecked = True
+          Position.X = 400.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 113.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 19
+          Text = 'Show Seconds'
+          OnChange = chkShowSecondsChange
+        end
+        object tbrScale: TTrackBar
+          CanParentFocus = True
+          Orientation = Horizontal
+          Position.X = 392.000000000000000000
+          Position.Y = 136.000000000000000000
+          TabOrder = 24
+          Value = 60.000000000000000000
+          OnChange = tbrScaleChange
+        end
+      end
+      object pclAnalog: TplFmxClock
+        Align = Client
+        Fill.Color = claSilver
+        Size.Width = 700.000000000000000000
+        Size.Height = 532.000000000000000000
+        Size.PlatformDefault = False
+        Active = True
+        AnalogClock.Active = True
+        AnalogClock.Dots.Color = claBlack
+        AnalogClock.Dots.CurrentColor = claBlack
+        AnalogClock.Dots.CurrentMinute = -1
+        AnalogClock.Dots.DotsScale = 60
+        AnalogClock.Dots.ExtraTimeColor = claNull
+        AnalogClock.Dots.ExtraTimeLenght = 0
+        AnalogClock.Dots.FutureColor = claNull
+        AnalogClock.Dots.HideUnusedDots = False
+        AnalogClock.Dots.PastColor = claNull
+        AnalogClock.Dots.PeriodLenght = 0
+        AnalogClock.Dots.Visible = True
+        AnalogClock.Hands.HoursHand.Color = claOrangered
+        AnalogClock.Hands.HoursHand.HScale = 0.050000000745058060
+        AnalogClock.Hands.HoursHand.MinWidth = 5
+        AnalogClock.Hands.HoursHand.Visible = True
+        AnalogClock.Hands.HoursHand.VScale = 30
+        AnalogClock.Hands.MinutesHand.Color = claSalmon
+        AnalogClock.Hands.MinutesHand.HScale = 0.029999999329447750
+        AnalogClock.Hands.MinutesHand.MinWidth = 3
+        AnalogClock.Hands.MinutesHand.Visible = True
+        AnalogClock.Hands.MinutesHand.VScale = 40
+        AnalogClock.Hands.SecondsHand.Color = claSnow
+        AnalogClock.Hands.SecondsHand.HScale = 0.009999999776482582
+        AnalogClock.Hands.SecondsHand.MinWidth = 1
+        AnalogClock.Hands.SecondsHand.Visible = True
+        AnalogClock.Hands.SecondsHand.VScale = 50
+        AnalogClock.Hands.Visible = True
+        DigitalClock.Active = False
+        DigitalClock.StyledSettings = [Family, Size, Style, FontColor]
+        DigitalClock.TextSettings.HorzAlign = Center
+        DigitalClock.TimeFormat = 'hh:mm:ss'
+        DigitalClock.Visible = False
+      end
+    end
+    object tbiDigitalClock: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 349.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcontacts'
+      TabOrder = 0
+      Text = 'Digital Clock'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object rct2: TRectangle
+        Align = Client
+        Fill.Color = claBlack
+        Size.Width = 700.000000000000000000
+        Size.Height = 700.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object MixedClock: TplFmxClock
+        Align = Client
+        Fill.Color = claBlack
+        Size.Width = 700.000000000000000000
+        Size.Height = 700.000000000000000000
+        Size.PlatformDefault = False
+        Active = True
+        AnalogClock.Active = False
+        AnalogClock.Dots.Color = claNull
+        AnalogClock.Dots.CurrentColor = claRed
+        AnalogClock.Dots.CurrentMinute = -1
+        AnalogClock.Dots.DotsScale = 60
+        AnalogClock.Dots.ExtraTimeColor = claNull
+        AnalogClock.Dots.ExtraTimeLenght = 0
+        AnalogClock.Dots.FutureColor = claNull
+        AnalogClock.Dots.HideUnusedDots = False
+        AnalogClock.Dots.PastColor = claRed
+        AnalogClock.Dots.PeriodLenght = 60
+        AnalogClock.Dots.Visible = True
+        AnalogClock.Hands.HoursHand.Color = claOrangered
+        AnalogClock.Hands.HoursHand.HScale = 0.050000000745058060
+        AnalogClock.Hands.HoursHand.MinWidth = 5
+        AnalogClock.Hands.HoursHand.Visible = False
+        AnalogClock.Hands.HoursHand.VScale = 30
+        AnalogClock.Hands.MinutesHand.Color = claSalmon
+        AnalogClock.Hands.MinutesHand.HScale = 0.029999999329447750
+        AnalogClock.Hands.MinutesHand.MinWidth = 3
+        AnalogClock.Hands.MinutesHand.Visible = False
+        AnalogClock.Hands.MinutesHand.VScale = 40
+        AnalogClock.Hands.SecondsHand.Color = claSnow
+        AnalogClock.Hands.SecondsHand.HScale = 0.009999999776482582
+        AnalogClock.Hands.SecondsHand.MinWidth = 1
+        AnalogClock.Hands.SecondsHand.Visible = False
+        AnalogClock.Hands.SecondsHand.VScale = 50
+        AnalogClock.Hands.Visible = False
+        DigitalClock.Active = True
+        DigitalClock.StyledSettings = []
+        DigitalClock.TextSettings.Font.Family = 'Liberation Sans'
+        DigitalClock.TextSettings.Font.Size = 72.000000000000000000
+        DigitalClock.TextSettings.Font.StyleExt = {00070000000000000004000000}
+        DigitalClock.TextSettings.FontColor = claRed
+        DigitalClock.TextSettings.HorzAlign = Center
+        DigitalClock.TimeFormat = 'hh:mm:ss'
+        DigitalClock.Visible = True
+        OnClockUpdate = MixedClockClockUpdate
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 124.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemrecent'
+      TabOrder = 0
+      Text = 'TabItem3'
+      Visible = False
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 170.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemmostrecent'
+      TabOrder = 0
+      Text = 'TabItem4'
+      Visible = False
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+  end
+end

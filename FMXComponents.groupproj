@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D6EDB874-97D3-46CC-AF4E-8B70DEEEC1F4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Packages\plFMXComponents.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\plFMXComponentsD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\plFmxClock\ClockDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="plFMXComponents">
+        <MSBuild Projects="Packages\plFMXComponents.dproj"/>
+    </Target>
+    <Target Name="plFMXComponents:Clean">
+        <MSBuild Projects="Packages\plFMXComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="plFMXComponents:Make">
+        <MSBuild Projects="Packages\plFMXComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="plFMXComponentsD">
+        <MSBuild Projects="Packages\plFMXComponentsD.dproj"/>
+    </Target>
+    <Target Name="plFMXComponentsD:Clean">
+        <MSBuild Projects="Packages\plFMXComponentsD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="plFMXComponentsD:Make">
+        <MSBuild Projects="Packages\plFMXComponentsD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClockDemo">
+        <MSBuild Projects="Demo\plFmxClock\ClockDemo.dproj"/>
+    </Target>
+    <Target Name="ClockDemo:Clean">
+        <MSBuild Projects="Demo\plFmxClock\ClockDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClockDemo:Make">
+        <MSBuild Projects="Demo\plFmxClock\ClockDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="plFMXComponents;plFMXComponentsD;ClockDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="plFMXComponents:Clean;plFMXComponentsD:Clean;ClockDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="plFMXComponents:Make;plFMXComponentsD:Make;ClockDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
