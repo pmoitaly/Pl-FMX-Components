@@ -1,0 +1,23 @@
+Compiled units
+Win32
+Other
+/Packages/*.identcache
+/Packages/*.stat
+/Packages/*.local
+/src/Unit1.pas
+/src/YASS.dpr
+/src/YASS.dproj
+/src/YASS.dproj.local
+/src/YASS.identcache
+/src/Yass.style
+/Demo/plFmxClock/__recovery
+/Demo/plFmxClock/__history
+/src/__recovery
+/src/__history
+/Packages/__recovery
+/Packages/__history
+/__history
+/FMXComponents.groupproj.local
+/Demo/plFmxClock/*.local
+*.stat
+*.identcache

@@ -49,6 +49,7 @@ package plFMXComponents;
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Pl components for Firemonkey Runtime'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
 
